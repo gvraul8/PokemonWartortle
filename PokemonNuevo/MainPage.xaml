@@ -451,10 +451,18 @@
                 <EasingDoubleKeyFrame KeyTime="00:00:02" Value="126"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:04" Value="129"/>
             </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="imgZzz" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.9000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimation Duration="00:00:01.9000000" Storyboard.TargetName="imgZzz" To="53.522" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)"/>
+            <DoubleAnimation Duration="00:00:01.9000000" Storyboard.TargetName="imgZzz" To="36.202" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)"/>
+            <DoubleAnimation Duration="00:00:01.9000000" Storyboard.TargetName="imgZzz" To="-157.567" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"/>
         </Storyboard>
     </Page.Resources>
-
-
 
 
     <Grid RenderTransformOrigin="0.503,0.499">
@@ -486,22 +494,48 @@
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
             <Viewbox Grid.Row="0">
-                <Button x:Name="btAtaque1" Content="Ataque1" HorizontalAlignment="Center" Height="Auto"  VerticalAlignment="Top" Width="Auto" Click="btAtaque1_click" Margin="0,10,0,10"/>
+                <Button x:Name="btAtaque1"  HorizontalAlignment="Center" Height="Auto"  VerticalAlignment="Top" Width="Auto" Click="btAtaque1_click" Margin="0,10,0,10" Background="#7F3F3939" ToolTipService.ToolTip="Pulse para realizar Ataque1" >
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock  VerticalAlignment="Center"  Width="Auto"><Run Text="Ataque1"/></TextBlock>
+                        <Image Source="/Img/bolaFuego-removebg-preview.png" Width="30" RenderTransformOrigin="0.5,0.5" >
+                            <Image.RenderTransform>
+                                <CompositeTransform Rotation="91.088"/>
+                            </Image.RenderTransform>
+                        </Image>
+                    </StackPanel>
+                </Button>
             </Viewbox>
-            <Viewbox Grid.Row="1">
-                <Button x:Name="btAtaque2" Content="Ataque2" HorizontalAlignment="Center" Height="Auto" Margin="0,10,0,10"  VerticalAlignment="Top" Width="Auto" Click="btAtaque2_click"/>
+            <Viewbox x:Name="vwBtAtaque2" Grid.Row="1">
+                <Button x:Name="btAtaque2" HorizontalAlignment="Center" Height="Auto" Margin="0,10,0,10"  VerticalAlignment="Top" Width="Auto" Click="btAtaque2_click" Background="#7F3F3939"  ToolTipService.ToolTip="Pulse para realizar Ataque2" >
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock VerticalAlignment="Center"  Width="Auto"><Run Text="Ataque2"/></TextBlock>
+                        <Image Source="/Img/agua.png" Width="30" />
+                    </StackPanel>
+                </Button>
             </Viewbox>
             <Viewbox Grid.Row="2" >
-                <Button x:Name="btDormir" Content="Dormir" HorizontalAlignment="Center" Height="Auto" Margin="0,10,0,10" VerticalAlignment="Top" Width="Auto" Click="btDormir_click"/>
+                <Button x:Name="btDormir" HorizontalAlignment="Center" Height="Auto" Margin="0,10,0,10" VerticalAlignment="Top" Width="Auto" Click="btDormir_click" Background="#7F3F3939" ToolTipService.ToolTip="Pulse para dormir">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock VerticalAlignment="Center"  Width="Auto"><Run Text="Dormir  "/></TextBlock>
+                        <Image Source="/Img/zzz.png" Width="15" />
+                    </StackPanel>
+                </Button>
             </Viewbox>
             <Viewbox Grid.Row="3" >
-                <Button x:Name="btCubrirse" Content="Cubrirse" HorizontalAlignment="Center" Height="Auto" Margin="0,10,0,10" VerticalAlignment="Top" Width="Auto" Click="btCubrirse_click"/>
+                <Button x:Name="btCubrirse" HorizontalAlignment="Center" Height="Auto" Margin="0,10,0,10" VerticalAlignment="Top" Width="Auto" Click="btCubrirse_click" Background="#7F3F3939" ToolTipService.ToolTip="Pulse para cubrirse">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock VerticalAlignment="Center"  Width="Auto"><Run Text="Cubrirse"/></TextBlock>
+                        <Image Source="/Img/image-removebg-preview.png" Width="20" />
+                    </StackPanel>
+                </Button>
             </Viewbox>
 
         </Grid>
 
-        <Image x:Name="imgPocionVida" HorizontalAlignment="Center" Height="Auto" VerticalAlignment="Center" Width="Auto" Source="/Img/pocion_vida.png" Grid.Column="2" Grid.Row="0" Margin="1,5,1,5" PointerReleased="imgPocionVida_PointerReleased" />
-        <Image x:Name="imgPocionEnergia" HorizontalAlignment="Center" Height="Auto" VerticalAlignment="Center" Width="Auto" Source="/Img/pocion_energia.png" Grid.Row="1" Grid.Column="2" Margin="1,5,1,5" PointerReleased="imgPocionEnergia_PointerReleased"/>
+        <Image x:Name="imgPocionVida" HorizontalAlignment="Center" Height="Auto" VerticalAlignment="Center" Width="Auto" Source="/Img/pocion_vida.png" Grid.Column="2" Grid.Row="0" Margin="1,5,1,5" PointerReleased="imgPocionVida_PointerReleased" ToolTipService.ToolTip="Pulse para aumentar vida"/>
+        <Image x:Name="imgPocionEnergia" HorizontalAlignment="Center" Height="Auto" VerticalAlignment="Center" Width="Auto" Source="/Img/pocion_energia.png" Grid.Row="1" Grid.Column="2" Margin="1,5,1,5" PointerReleased="imgPocionEnergia_PointerReleased" ToolTipService.ToolTip="Pulse para aumentar energía"/>
+        
+        
         <TextBlock x:Name="tbNombre" Grid.Column="1" HorizontalAlignment="Center" Height="AUTO"  Grid.Row="3" TextWrapping="Wrap" Text="WARTORTLE" VerticalAlignment="Center" Width="Auto"  FontSize="16" FontWeight="Bold" Foreground="Black"  />
         <Image x:Name="imgEnergia" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" Height="Auto" VerticalAlignment="Center" Width="Auto" Source="/Img/icono_energia.png" Margin="1,5,1,5" />
         <Image x:Name="imgVida" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" Height="Auto" VerticalAlignment="Center" Width="Auto" Source="/Img/icono_vida.png" Margin="1,5,1,5" />
@@ -792,6 +826,11 @@
                             </Path.RenderTransform>
                         </Path>
                     </Canvas>
+                    <Image x:Name="imgZzz" Height="80" Canvas.Left="35" Canvas.Top="113" Width="104" Source="/Img/zzz.png" Visibility="Collapsed" RenderTransformOrigin="0.5,0.5">
+                        <Image.RenderTransform>
+                            <CompositeTransform/>
+                        </Image.RenderTransform>
+                    </Image>
                 </Canvas>
                 <Image x:Name="bolaFuego" Height="92" Canvas.Left="51.067" Canvas.Top="182.173" Width="115" Source="/Img/bolaFuego-removebg-preview.png" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
                     <Image.RenderTransform>

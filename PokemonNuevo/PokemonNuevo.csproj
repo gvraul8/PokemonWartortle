@@ -130,6 +130,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="icono.ico" />
     <Content Include="Img\006.png" />
     <Content Include="Img\agua.png" />
     <Content Include="Img\agua2.png" />
@@ -147,6 +148,7 @@
     <Content Include="Img\pocion_energia.png" />
     <Content Include="Img\pocion_vida.png" />
     <Content Include="Img\rayo1.png" />
+    <Content Include="Img\zzz.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
