@@ -14,4 +14,4 @@ Se trata de la creación de un pokemon con UWP, en este caso el pokemon elegido 
 
 ## Resultado 
 
-![image](https://github.com/gvraul8/PokemonNuevo/assets/72313586/cc7c155f-aec0-476c-a1b7-7fe0637ed194)
+![image](https://github.com/gvraul8/PokemonWartortle/assets/72313586/9f4f4826-79a2-458a-bdb2-ac77bc12efd7)
